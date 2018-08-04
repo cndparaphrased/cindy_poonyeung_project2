@@ -1,0 +1,35 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Lora", serif;
+    font-size: 1.6rem;
+}
+
+h1, h2, h3, h6 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $black;
+}
+
+h1, .h2--white, .h3--white, h6 {
+    color: #fff;
+}
+
+.h2--grey {
+    color: $grey;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 2.6rem;
+}
+
+h6 {
+    font-size: 1.4rem;
+}
