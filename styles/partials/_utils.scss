@@ -2,3 +2,13 @@ $black: #2a2a2a;
 $red: #da331d;
 $yellow: #e5bf4b;
 $grey: #d2cfcf;
+
+$heading-font: "Raleway", sans-serif;
+
+@mixin heading-text($font-size, $color: #fff) {
+    font-size: $font-size;
+    font-family: $heading-font;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $color;
+}

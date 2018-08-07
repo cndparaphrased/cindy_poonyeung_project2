@@ -1,0 +1,269 @@
+main {
+    text-align: center;
+}
+
+// ==============================
+// SECTION - ABOUT STYLES 
+// ==============================
+.about__container {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+}
+
+.strengths, .copy--about {
+    width: 50%;
+}
+
+.strengths__container {
+    display: flex;
+    justify-content: center;
+}
+
+.strengths__cell {
+    margin: 25px 50px;
+}
+
+// ==============================
+// SECTION - WELCOME STYLES 
+// ==============================
+.welcome {
+    background-color: $yellow;
+}
+
+.copy--welcome {
+    padding: 25px;
+    .textblock {
+        padding: 30px 70px 20px;
+    }
+}
+
+// ==============================
+// SECTION - SERVICES STYLES 
+// ==============================
+.services__container {
+    padding: 40px 0;
+}
+
+.services__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.services__text, .services__img {
+    width: 50%;
+}
+
+.services__text {
+    padding: 0 75px;
+}
+
+// ==============================
+// ARTICLE - REVIEWS STYLES 
+// ==============================
+.reviews {
+    background-color: $black;;
+}
+
+.reviews__cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 250px;
+    .textblock {
+        padding: 25px 0 10px 0;
+    }
+}
+
+.reviews__author {
+    color: $grey;
+    font-style: italic;
+    &::before, &::after {
+        content: "~";
+        margin: 10px;
+    }
+}
+
+// ==============================
+// SECTION - EVENTS STYLES
+// ==============================
+.events {
+    padding-top: 50px;
+}
+
+.events__gallery {
+    padding-top: 20px;
+    display: flex;
+}
+
+.events__picture {
+    flex-basis: 0 1 calc(80% / 3);
+    position: relative;
+    &:hover .events__overlay {
+        opacity: 1;
+    }
+}
+
+.events__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(42, 42, 42, 0.9);
+    opacity: 0;
+    transition: opacity .7s;
+}
+
+.events__title {
+    font-size: 3rem;
+}
+
+.events__text {
+    font-size: 1.5rem;
+    padding: 0 20px;
+    &::before {
+        content: "";
+        background-color: #fff;
+        height: 1px;
+        width: 70%;
+        position: absolute;
+        top: 50%;
+        left: 15%;
+    }
+}
+
+// ==============================
+// SECTION - QUESTIONS STYLES 
+// ==============================
+.form--messages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .message-input {
+        width: 50%;
+        padding-top: 10px;
+        margin-bottom: 10px;
+        border: none;
+        border-bottom: 1px solid $black;
+        color: $black;
+        font-size: 1.8rem;
+        text-align: center;
+        resize: none;
+    }
+}
+
+// ==============================
+// SECTION - STATS STYLES 
+// ==============================
+.stats {
+    background-color: $yellow;
+}
+
+.stats__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+.stats__item {
+    margin: 50px;
+}
+
+.stats__icon {
+    font-size: 5rem;
+}
+
+.stats__number {
+    @include heading-text(2.8rem, $black);
+}
+
+.stats__detail {
+    text-transform: capitalize;
+    font-size: 2.4rem;
+}
+
+// ==============================
+// ARTICLE - BLOG STYLES
+// ==============================
+.blog__container {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0 25px 0;
+}
+
+.blog__post {
+    margin: 15px;
+    text-align: left;
+    &:first-child {
+        margin-left: 0;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.blog__title {
+    font-family: $heading-font;
+    font-size: 2rem;
+}
+
+.blog__link {
+    @include heading-text(1.4rem, $red);
+    position: relative;
+    &::after {
+        content: "\f101";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        position: absolute;
+        top: 3px;
+        right: -25px;
+    }
+}
+
+
+// ====================
+// MEDIA QUERIES
+// ====================
+
+@media (max-width: 1320px) {
+    .events__text::before {
+        top: 45%;
+    }
+} // = = = = = = = = = = = = = = = END MAX-WIDTH 1320px
+
+@media (max-width: 1100px) {
+    .about__container {
+        flex-wrap: wrap;
+    }
+
+    .strengths, .copy--about {
+        width: 100%;
+    }
+
+    .strengths__cell:last-child {
+        h3 {
+            letter-spacing: -1px;
+        }
+    }
+
+    .events__title {
+        font-size: 2.5rem;
+    }
+
+    .events__text {
+        font-size: 1.4rem;
+        padding: 5px 10px;
+    }
+} // = = = = = = = = = = = = = = = END MAX-WIDTH 1100px
+
+@media (max-width: 900px) {
+
+}
