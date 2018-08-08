@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i|Raleway:600" rel="stylesheet">
-    <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy" crossorigin="anonymous"></script>
-    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/style.css">
     <title>Restaurant</title>
 </head>
@@ -60,7 +59,7 @@
         <!-- SECTION-ABOUT STARTS -->
         <section class="about" id="about">
             <div class="wrapper">
-                <h2>We are...</h2>
+                <h2 class="h2--about">We are...</h2>
 
                 <div class="about__container">
                     <div class="strengths">
@@ -87,7 +86,7 @@
                     </div>
 
                     <div class="copy copy--about">
-                        <h3>About Us</h3>
+                        <h3 class="h3--about">About Us</h3>
                         <p class="textblock">Lorem ipsum dolor sit amet, consecteteur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
                         <div class="btn btn--red">
                             <a href="#" class="btn__text">More</a>
@@ -141,7 +140,7 @@
         <!-- ARTICLE-REVIEWS STARTS -->
         <article class="reviews">
             <div class="wrapper">
-                <h2 class="h2--grey">Reviews</h2>
+                <h2 class="h2--grey h2--reviews">Reviews</h2>
                  <div class="reviews__carousel">
                     <div class="reviews__cell">
                         <img src="assets/image-8.jpeg" alt="Reviewer avatar" class="reviews__image">
@@ -171,7 +170,7 @@
                         <p class="textblock--white events__text">Lorem ipsum dolor sit amet, consecteteur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
                     </div>
                 </div>
-                <div class="events__picture">
+                <div class="events__picture event__3">
                     <img src="assets/image-11.jpeg" alt="A busy restaurant kitchen" class="events__img">
                     <div class="events__overlay">
                         <h2 class="h2--white events__title">Sample Event</h2>
@@ -239,7 +238,7 @@
                         <p class="blog__title">Reservations are Booming!</p>
                         <a href="#" class="blog__link">Read more</a>
                     </li>
-                    <li class="blog__post">
+                    <li class="blog__post post__3">
                         <img src="assets/image-14.jpeg" alt="Glasses full of white wine clinking">
                         <p class="blog__title">Wine Tasting Events</p>
                         <a href="#" class="blog__link">Read more</a>
@@ -289,32 +288,32 @@
                         <h3 class="h3--white">Instagram</h3>
                         <div class="instagram-grid">
                             <div class="instagram-grid__container">
-                                <div class="instagram-grid__item"><img src="assets/image-15.jpeg" alt="Plate of pasta"></div>
-                                <div class="instagram-grid__item"><img src="assets/image-16.jpeg" alt="Plate and utensils laid out"></div>
-                                <div class="instagram-grid__item"><img src="assets/image-17.jpeg" alt="Many dishes laid out on a table with drinks"></div>
-                                <div class="instagram-grid__item"><img src="assets/image-18.jpeg" alt="Two plates of macaroni and cheese"></div>
+                                <div class="instagram-grid__item"><a href="#" target="_blank"><img src="assets/image-15.jpeg" alt="Plate of pasta"></a></div>
+                                <div class="instagram-grid__item"><a href="#" target="_blank"><img src="assets/image-16.jpeg" alt="Plate and utensils laid out"></a></div>
+                                <div class="instagram-grid__item"><a href="#" target="_blank"><img src="assets/image-17.jpeg" alt="Many dishes laid out on a table with drinks"></a></div>
+                                <div class="instagram-grid__item"><a href="#" target="_blank"><img src="assets/image-18.jpeg" alt="Two plates of macaroni and cheese"></a></div>
                             </div>
                             <div class="instagram-grid__container">
-                                <div class="instagram-grid__item"><img src="assets/image-19.jpeg" alt="A plate of pasta and a bottle of red wine"></div>
-                                <div class="instagram-grid__item"><img src="assets/image-20.jpeg" alt="A tomato stew"></div>
-                                <div class="instagram-grid__item"><img src="assets/image-21.jpeg" alt="Burger and fries"></div>
-                                <div class="instagram-grid__item"><img src="assets/image-22.jpeg" alt="A cut of steak with carrots and garnish"></div>
+                                <div class="instagram-grid__item"><a href="#" target="_blank"><img src="assets/image-19.jpeg" alt="A plate of pasta and a bottle of red wine"></a></div>
+                                <div class="instagram-grid__item"><a href="#" target="_blank"><img src="assets/image-20.jpeg" alt="A tomato stew"></a></div>
+                                <div class="instagram-grid__item"><a href="#" target="_blank"><img src="assets/image-21.jpeg" alt="Burger and fries"></a></div>
+                                <div class="instagram-grid__item"><a href="#" target="_blank"><img src="assets/image-22.jpeg" alt="A cut of steak with carrots and garnish"></a></div>
                             </div>
                         </div>
                         <ul class="social">
                             <li class="social__type">
-                                <a href="http://facebook.com" target="_blank">
-                                    <i title="Facebook" class="fab fa-facebook-square social__icon"></i>
+                                <a href="http://facebook.com" aria-label="Facebook" target="_blank">
+                                    <i aria-hidden title="Facebook" class="fab fa-facebook-square social__icon"></i>
                                 </a>
                             </li>
                             <li class="social__type">
-                                <a href="http://instagram.com" target="_blank">
-                                    <i title="Instagram" class="fab fa-instagram social__icon"></i>
+                                <a href="http://instagram.com" aria-label="Instagram" target="_blank">
+                                    <i aria-hidden title="Instagram" class="fab fa-instagram social__icon"></i>
                                 </a>
                             </li>
                             <li class="social__type">
-                                <a href="http://pinterest.com" target="_blank">
-                                    <i title="Pinterest" class="fab fa-pinterest-p social__icon"></i>
+                                <a href="http://pinterest.com" aria-label="Pinterest" target="_blank">
+                                    <i aria-hidden title="Pinterest" class="fab fa-pinterest-p social__icon"></i>
                                 </a>
                             </li>
                         </ul>
@@ -326,20 +325,20 @@
 
                     <nav>
                         <ul class="nav nav--footer">
-                            <li class="nav__item">
-                                <a href="#" class="nav__link">Home</a>
+                            <li class="nav__item nav__item--footer">
+                                <a href="#" class="nav__link nav__link--footer">Home</a>
                             </li>
-                            <li class="nav__item">
-                                <a href="#" class="nav__link">Menu</a>
+                            <li class="nav__item nav__item--footer">
+                                <a href="#" class="nav__link nav__link--footer">Menu</a>
                             </li>
-                            <li class="nav__item">
-                                <a href="#" class="nav__link">Blog</a>
+                            <li class="nav__item nav__item--footer">
+                                <a href="#" class="nav__link nav__link--footer">Blog</a>
                             </li>
-                            <li class="nav__item">
-                                <a href="#" class="nav__link">Contact</a>
+                            <li class="nav__item nav__item--footer">
+                                <a href="#" class="nav__link nav__link--footer">Contact</a>
                             </li>
-                            <li class="nav__item">
-                                <a href="#about" class="nav__link">About Us</a>
+                            <li class="nav__item nav__item--footer">
+                                <a href="#about" class="nav__link nav__link--footer">About Us</a>
                             </li>
                         </ul>
                     </nav>

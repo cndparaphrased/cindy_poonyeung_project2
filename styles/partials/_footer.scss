@@ -174,6 +174,10 @@
         width: 70%;
     }
 
+    .footer__cell:last-child {
+        margin-right: 25px;
+    }
+
     .footer__cell--instagram {
         width: 100%;
         text-align: center;
@@ -202,6 +206,107 @@
     }
 
     .nav--footer {
-    margin: 20px 0 50px 0;
+        margin: 20px 0 50px 0;
     }
 } // = = = = = = = = = = = = = = = END MAX-WIDTH 1100px
+
+@media (max-width: 900px) {
+    .form__email {
+        background-size: 7%;
+    }
+
+    .instagram-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .instagram-grid__container:first-child {
+        margin-bottom: 10px;
+    }
+} // = = = = = = = = = = = = = = = END MAX-WIDTH 900px
+
+@media (max-width: 700px) {
+    .footer__cell--contact {
+        text-align: center;
+    }
+
+    .contact-type {
+        justify-content: center;
+    }
+
+    .form__email {
+        padding: 10px;
+    }
+
+    .form__submit {
+        right: 13%;
+    }
+
+    .footer__cell--about {
+        display: none;
+    }
+
+    .nav--footer {
+        flex-wrap: wrap;
+    }
+
+    .nav__item--footer {
+        margin: 15px;
+    }
+} // = = = = = = = = = = = = = = = END MAX-WIDTH 700px
+
+@media (max-width: 450px) {
+    .footer__cell--contact {
+        margin: 0;
+    }
+
+    .form__email {
+        background-size: 8%;
+    }
+
+    .instagram-grid__container:first-child {
+        display: none;
+    }
+
+    .instagram-grid__container:last-child {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .instagram-grid__item {
+        margin-bottom: 10px;
+        width: 30%;
+        img {
+            display: inline-block;
+        }
+    }
+
+    .social {
+        margin: 0;
+    }
+
+    .social__type {
+        margin: 10px;
+    }
+
+    .social__icon {
+        padding: 20px;
+    }
+
+    .footer__bottom {
+        margin-top: 100px;
+    }
+
+    .nav--footer {
+        margin: 0 0 20px;
+    }
+
+    .nav__item--footer {
+        width: 100%;
+        margin: 10px;
+    }
+
+    .nav__link--footer {
+        font-size: 1.8rem;
+    }
+}

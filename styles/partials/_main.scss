@@ -146,17 +146,18 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    .message-input {
-        width: 50%;
-        padding-top: 10px;
-        margin-bottom: 10px;
-        border: none;
-        border-bottom: 1px solid $black;
-        color: $black;
-        font-size: 1.8rem;
-        text-align: center;
-        resize: none;
-    }
+}
+
+.message-input {
+    width: 50%;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid $black;
+    color: $black;
+    font-size: 1.8rem;
+    text-align: center;
+    resize: none;
 }
 
 // ==============================
@@ -174,7 +175,7 @@ main {
 }
 
 .stats__item {
-    margin: 50px;
+    margin: 40px;
 }
 
 .stats__icon {
@@ -223,7 +224,7 @@ main {
         font-family: "Font Awesome 5 Free";
         font-weight: 900;
         position: absolute;
-        top: 3px;
+        top: 1.5px;
         right: -25px;
     }
 }
@@ -262,8 +263,232 @@ main {
         font-size: 1.4rem;
         padding: 5px 10px;
     }
+
+    .stats__item {
+        margin: 20px;
+    }
+
+    .stats__icon {
+        font-size: 4.5rem;
+    }
+
+    .stats__number {
+        font-size: 2.4rem;
+    }
+
+    .stats__detail {
+        font-size: 2rem;
+    }
 } // = = = = = = = = = = = = = = = END MAX-WIDTH 1100px
 
 @media (max-width: 900px) {
+    .services__container {
+        padding: 0 50px;
+    }
 
-}
+    .services__item {
+        flex-direction: column;
+        border: 1px solid $black;
+        margin-bottom: 50px;
+        padding: 50px;
+    }
+
+    .services__text, .services__img {
+        width: 100%;
+    }
+
+    .services__text {
+        padding: 0;
+    }
+
+    .services__img {
+        order: -1;
+    }
+
+    .reviews__cell {
+        padding: 25px 125px;
+    }
+
+    .event__3 {
+        display: none;
+    }
+
+    .events__title {
+        font-size: 3rem;
+    }
+
+    .events__text {
+        font-size: 1.5rem;
+    }
+
+    .message-input {
+        width: 70%;
+    }
+
+    .stats__container {
+        flex-wrap: wrap;
+    }
+
+    .stats__item {
+        flex: 1 0 calc(100% / 2 - 40px);
+    }
+
+    .stats__icon {
+        font-size: 3rem;
+    }
+
+    .stats__number {
+        margin: 10px;
+    }
+
+    .stats__detail {
+        margin: 0;
+    }
+
+    .blog__container {
+        flex: 1 0 50%;
+        justify-content: space-around;
+    }
+
+    .blog__post {
+        text-align: inherit;
+    }
+
+    .post__3 {
+        display: none;
+    }
+
+    .blog__title {
+        margin: 10px 0;
+    }
+} // = = = = = = = = = = = = = = = END MAX-WIDTH 900px
+
+@media (max-width: 700px) {
+    .about__container {
+        padding-bottom: 0;
+    }
+    
+    .h2--about, .strengths {
+        display: none;
+    }
+
+    .h3--about {
+        @include heading-text(4rem, $black);
+        margin: 0;
+    }
+
+    .copy--welcome {
+        .textblock {
+            padding: 0;
+            margin: 0 0 20px;
+            text-align: justify;
+        }
+    }
+
+    .services__container {
+        padding: 0 25px;
+    }
+
+    .services__item {
+        margin-bottom: 25px;
+        padding: 25px;
+    }
+
+    .reviews__cell {
+        padding: 25px 50px;
+    }
+
+    .events__gallery {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 25px;
+    }
+
+    .events__picture {
+        margin: 25px;
+    }
+
+    .events__title {
+        margin: 5px 0;
+    }
+
+    .events__text {
+        font-size: 1.8rem;
+        margin: 0;
+    }
+
+    .events__text::before {
+        height: 0;
+        width: 0;
+    }
+
+    .message-input {
+        width: 85%;
+    }
+
+    .stats__icon {
+        font-size: 2.5rem;
+    }
+
+    .stats__number, .stats__detail {
+        font-size: 1.8rem;
+    }
+
+    .blog__container {
+        flex-wrap: wrap;
+    }
+
+    .blog__post:first-child {
+        margin-left: 15px;
+    }
+} // = = = = = = = = = = = = = = = END MAX-WIDTH 700px
+
+@media (max-width: 450px) {
+    .about__container,
+    .copy--welcome,
+    .services__container {
+        padding: 0 10px;
+    }
+
+    .h3--about {
+        font-size: 3.6rem;
+    }
+
+    .copy--about .textblock,
+    .copy--welcome .textblock {
+        font-size: 2.2rem;
+        text-align: justify;
+    }
+
+    .services__item {
+        padding: 0;
+    }
+
+    .services__text {
+        padding: 0 10px;
+    }
+
+    .reviews__cell {
+        padding: 0 10px;
+        .textblock {
+            padding: 10px 0;
+        }
+    }
+
+    .reviews__author {
+        margin: 0 0 10px;
+    }
+
+    .events, .stats {
+        display: none;
+    }
+
+    .message-input {
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .blog__container {
+        margin-top: 0;
+    }
+} // = = = = = = = = = = = = = = = END MAX-WIDTH 450px

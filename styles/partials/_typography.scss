@@ -58,3 +58,25 @@ h6 {
     @include heading-text(1.4rem);
     margin: 0;
 }
+
+// ====================
+// MEDIA QUERIES
+// ====================
+
+@media (max-width: 700px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+
+    h2 {
+        margin: 20px;
+        font-size: 3.6rem;
+    }
+    
+}
