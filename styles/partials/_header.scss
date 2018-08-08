@@ -14,6 +14,10 @@
     justify-content: space-between;
 }
 
+.menu-btn {
+    display: none;
+}
+
 .nav__item--main:nth-of-type(5) {
     margin-right: 0;
 }
@@ -55,6 +59,10 @@
 } // = = = = = = = = = = = = = = = END MAX-WIDTH 1100px
 
 @media (max-width: 900px) {
+    .header {
+        background: linear-gradient(to right, rgba(42, 42, 42, 0.5), rgba(42, 42, 42, 0.5)), url(../assets/image-1.jpeg) bottom right 20%/cover no-repeat;
+    }
+
     .header-flex {
         padding: 0;
     }
@@ -62,87 +70,134 @@
     .header-top {
         background: $black;
         padding: 10px 20px;
-        flex-wrap: wrap;
-    }
-
-    .logo,
-    .menu-btn {
-        width: 50%;
+        display: block;
+        position: relative;
     }
 
     .header-bottom {
         padding: 0 25px;
     }
 
+    .nav__container--main {
+        display: block;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+    }
 
+    .nav--main {
+        clear: both;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        background-color: $black;
+        max-height: 0;
+        transition: max-height .7s ease-out;
+    }
 
-    // .logo,
-    // .menu-btn {
-    //     width: 45%;
-    // }
+    .nav__item--main:nth-of-type(5) {
+        margin: 0 10px;
+    }
 
-    // // .nav__container--main {
-    // //     width: 100%;
-    // //     position: relative;
-    // //     top: 0;
-    // //     height: 0;
-    // // }
+    .nav__link--last {
+        padding: 25px;
+    }
 
-    // .nav--main {
-    //     position: absolute;
-    //     width: 100%;
-    //     // height: calc(100vh - 100px);
-    //     flex-direction: column;
-    //     align-items: center;
-    //     justify-content: space-around;
-    //     margin: 0;
-    //     padding: 20px 0;
-    //     background: rgba(42, 42, 42, 0.98);   
-    // }
+    .nav__link--main {
+        display: block;
+        font-size: 2.4rem;
+        padding: 25px;
+        opacity: 0;
+        transition: opacity .5s ease-in-out;
+    }
 
-    // .nav__item--main {
-    //     margin: 0;
-    //     padding: 10px 50px;
-    // }
-
-    // .nav__link--main {
-    //     display: block;
-    //     letter-spacing: 3px;
-    //     padding: 20px 100px;
-    // }
-
-
+    .menu-icon {
+        float: right;
+        position: absolute;
+        top: -15px;
+        right: 25px;
+    }
 
     .menu-icon__hamburger {
         display: block;
         background: #fff;
-        height: 3px;
-        width: 40px;
+        height: 2.5px;
+        width: 25px;
         position: relative;
+        transition: background .2s ease-out;
         &:hover {
             cursor: pointer;
         }
-        &::before,
-        &::after {
-            display: block;
-            background: #fff;
-            content: "";
-            height: 100%;
-            width: 100%;
-            position: absolute;
-        }
-        &::before {
-            bottom: 10px;
-            margin-top: 10px;
-            &:hover {
-                cursor: pointer;
-            }
-        }
-        &::after {
-            top: 10px;
-            &:hover {
-                cursor: pointer;
-            }
-        }
+    }
+
+    .menu-icon__hamburger::before,
+    .menu-icon__hamburger::after {
+        display: block;
+        background: #fff;
+        content: "";
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        transition: all .2 ease-out;
+    }
+
+    .menu-icon__hamburger::before {
+        bottom: 7px;
+    }
+
+    .menu-icon__hamburger::after {
+        top: 7px;
+    }
+
+    .menu-btn:checked ~ .nav--main {
+        max-height: 100vh;
+    }
+
+    .menu-btn:checked ~ .nav__link--main {
+        opacity: 1;
+    }
+
+} // = = = = = = = = = = = = = = = END MAX-WIDTH 900px
+
+@media (max-width: 700px) {
+    .header {
+        background: linear-gradient(to right, rgba(42, 42, 42, 0.5), rgba(42, 42, 42, 0.5)), url(../assets/image-responsive.jpeg) center/cover no-repeat;
+    }
+
+    .menu-icon {
+        top: -20px;
+    }
+
+    .header__text {
+        font-size: 5rem;
+    }
+
+    .header__text--small {
+        font-size: 2.4rem;
+    }
+} // = = = = = = = = = = = = = = = END MAX-WIDTH 700px
+
+@media (max-width: 450px) {
+    .logo {
+        font-size: 3.6rem;
+    }
+
+    .menu-icon {
+        top: -23px;
+    }
+    
+    .header-bottom {
+        align-items: center;
+    }
+
+    .header__text {
+        font-size: 4.5rem;
+    }
+
+    .header__text--small {
+        font-size: 2rem;
+        margin: 20px 0;
     }
 }
